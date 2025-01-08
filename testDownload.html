@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Function to ask for a password before allowing the download
+      function checkPasswordAndDownload() {
+        var password = prompt(
+          "برای دانلود لینک شما نیاز به پسورد دارید. لطفا با ما تماس بگیرید تا پسورد به شما ارسال شود."
+        );
+
+        // Check if the entered password is correct
+        if (password === "kamran") {
+          // If correct, proceed to download
+          window.location.href =
+            "./images/Elham Torabi Qualified Healthcare Letter.pdf";
+        } else {
+          // If incorrect, show an alert message
+          alert("متاسفانه شما پسورد غلط را وارد کردید. دوباره امتحان کنید");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click on the button below to download the file:</p>
+    <!-- Use the button to trigger the password prompt and file download -->
+    <button onclick="checkPasswordAndDownload()">Download</button>
+  </body>
+</html>
